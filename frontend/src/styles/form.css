@@ -1,0 +1,19 @@
+.add-user-form {
+    padding: 20px;
+  }
+  
+  .add-user-form input,
+  .add-user-form select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .add-user-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+  }
+  

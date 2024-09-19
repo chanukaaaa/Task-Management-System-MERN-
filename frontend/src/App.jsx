@@ -1,23 +1,26 @@
-// src/App.jsx
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import DashboardPage from "./pages/DashboardPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import Navbar from "./components/Navbar";
+import React from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import AdminDashboard from './components/AdminDashboard';
+import AddUserForm from './components/AddUserForm';
+import UserList from './components/UserList';
 
 const App = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = (role) => {
+    if (role === 'admin') {
+      navigate('/dashboard');
+    }
+  };
+
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<LoginPage onLogin={handleLogin} />} />
+      <Route path="/dashboard" element={<AdminDashboard />} />
+      <Route path="/users" element={<UserList />} />
+      <Route path="/add-user" element={<AddUserForm />} />
+    </Routes>
   );
 };
 

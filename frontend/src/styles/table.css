@@ -1,0 +1,27 @@
+.user-list {
+    padding: 20px;
+  }
+  
+  .user-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-list table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  .user-list th, td {
+    padding: 10px;
+  }
+  
+  .btn-add-user {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
