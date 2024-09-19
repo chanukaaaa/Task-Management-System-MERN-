@@ -1,0 +1,14 @@
+{
+    "build": {
+      "builder": "Nixpacks",
+      "plan": {
+        "frontend": {
+          "start": "cd frontend && npm install && npm run dev"
+        },
+        "backend": {
+          "start": "cd backend && npm install && npm run server"
+        }
+      }
+    }
+  }
+  
